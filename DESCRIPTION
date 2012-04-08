@@ -1,6 +1,6 @@
 Package: RcppDE
-Version: 0.1.0
-Date: $Date: 2010-12-12 19:50:40 -0600 (Sun, 12 Dec 2010) $
+Version: 0.1.1
+Date: $Date: 2012-04-08 15:14:35 -0500 (Sun, 08 Apr 2012) $
 Title: Global optimization by differential evolution in C++
 Author: Dirk Eddelbuettel extending DEoptim (by David Ardia, Katharine
         Mullen, Brian Peterson, Joshua Ulrich) which itself is based on
@@ -8,13 +8,18 @@ Author: Dirk Eddelbuettel extending DEoptim (by David Ardia, Katharine
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: This package provides an efficient C++ based
         implementation of the DEoptim function which performs global
-        optimization by differential evolution. It aims to show that
-        "easier, shorter, faster: pick any three" is achievable when
-        moving code from plain old C to modern C++.
+        optimization by differential evolution.  Its creation was
+        motivated by trying to see if the old approximation "easier,
+        shorter, faster: pick any two" could in fact be extended to
+        achieving all three goals while moving the code from plain old
+        C to modern C++.  The initial version did in fact do so, but a
+        good part of the gain was due to an implicit code review which
+        eliminated a few inefficiencies which have since been
+        eliminated in DEoptim.
 License: GPL (>= 2)
 Depends: Rcpp, RcppArmadillo (>= 0.2.8)
-Suggests: inline, DEoptim
+Suggests: inline, DEoptim, lattice
 LinkingTo: Rcpp, RcppArmadillo
-Packaged: 2010-12-13 01:52:45.383362 UTC; edd
+Packaged: 2012-04-08 20:24:02.75056 UTC; edd
 Repository: CRAN
-Date/Publication: 2010-12-13 13:25:40
+Date/Publication: 2012-04-09 05:39:37
