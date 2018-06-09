@@ -1,3 +1,62 @@
+2018-06-09  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.1.6
+
+2018-06-07  Kevin Ushey  <kevinushey@gmail.com>
+
+	* src/deoptim.cpp: disable RNG synchronization with dev. Rcpp
+	* tests/rosenbrock.R: add test
+
+2018-03-03  Dirk Eddelbuettel  <edd@debian.org>
+
+	* tests/compTest.R: Condition comparison on (optional) DEoptim
+	package actually being available
+
+2017-08-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* NAMESPACE: Use .registration=TRUE
+	* src/devol.cpp (putFunPtrInXPtr): Use Rcpp::export on test function
+	* src/RcppExports.cpp: Updated
+	* R/RcppExports.R: Idem
+
+	* tests/compTest.R (runPair): Update test
+
+	* src/Makevars (PKG_LIBS): Update, added OpenMP flags, use C++11
+
+	* cleanup: Minor edits
+
+	* .travis.yml: Updated to using run.sh from r-travis
+
+2016-02-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/devol.cpp: Use R:: namespace for scalar rnorm, rcauchy calls
+
+2016-02-06  Yi Kang  <yi.kang@mmf.utoronto.ca>
+
+	* src/devol.cpp: Support JADE randomization for crossover and weight
+	* R/DEoptim.R: Idem
+	* R/DEoptim.control.R: Idem
+	* man/DEoptim.control.Rd: Idem
+
+2016-02-03  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/devol.cpp (devol): Use std::abs()
+
+	* man/DEoptim.control.Rd: Updated to mention d_reltol, d_steptol
+
+2016-02-02  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/devol.cpp: Revert Jan 21 change for -std=c++14; ensure
+	ARMA_32BIT_WORD is defined so that Armadillo will always integers we
+	can interchange with R (whereas C++11/14 would lead to 64 bit)
+
+2016-01-25  Yi Kang  <yi.kang@mmf.utoronto.ca>
+
+	* src/deoptim.cpp: Add d_reltol, d_steptol for convergence criterion,
+	remove i_check_winner, i_av_winner
+	* src/devol.cpp: Idem; also switch memcpy() to memmove()
+	* R/DEoptim.R: Corresponding changes on R side
+
 2016-01-22  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version): Release 0.1.5
