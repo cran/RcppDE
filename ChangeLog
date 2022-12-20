@@ -1,3 +1,67 @@
+2022-12-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.1.7
+
+	* src/evaluate.h: Move helper function from devol.cpp
+	* src/devol.cpp: Idem, remove ancient Armadillo define
+
+	* src/evaluate.h: Update function signatures to use NumericVector
+	* src/RcppExports.cpp: Idem
+	* R/RcppExport.R: Idem
+
+	* src/exampleFunctions.cpp: Moved out of evaluate.h
+
+2022-12-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/evaluate.h: Compiled function interface back to consistently
+	being single argument of parameter vector
+	* src/devol.cpp: Idem
+
+ 	* man/DEoptim.Rd: Use https, remove dead link to code.html
+	* man/DEoptim.control.Rd: Use https
+	* man/DEoptim-methods.Rd: Idem
+
+	* .editorconfig: Added
+
+2022-12-15  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+2022-12-08 Max Coulter <max.coulter@xelect.co.uk>
+
+	* src/devol.cpp: Additions to crossover weights from DEoptim
+
+2022-12-02  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+2022-11-30 Max Coulter <max.coulter@xelect.co.uk>
+
+	* src/devol.cpp: Fix to switch statement strategy 6
+
+2022-11-14  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml (jobs): Update to actions/checkout@v3
+
+2021-05-08  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (URL, BugReports): Added links
+
+2021-01-05  Dirk Eddelbuettel  <edd@debian.org>
+
+        * .github/workflows/ci.yaml: Add CI runner using r-ci
+	* README.md: Add new badge
+
+2020-07-31  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .travis.yml: Update to 'bionic' and R 4.0.*
+
+2019-09-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* src/evaluate.h: Use Rcpp::Shield<SEXP> for Rf_lang3() and Rf_eval()
+
 2018-06-09  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.1.6
@@ -302,4 +366,3 @@
 	* R/zzz.R: Switch to 'packageStartupMessage()' which can suppressed
 
 	* Initial version based on SVN revision 27 of DEoptim
-
