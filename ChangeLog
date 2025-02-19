@@ -1,3 +1,30 @@
+2025-02-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Remove ancient TravisCI badge, add r-universe and
+	dependency badges
+
+2024-10-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Authors@R): Added
+
+2024-10-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll micro version
+
+	* src/devol.cpp (devol): Switch three integer vectors from
+	arma::icolvec to std::vector<int32_t> for ARMA_64BIT_WORD compilation
+
+2024-03-01  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml (jobs): Update to actions/checkout@v4,
+	add r-ci-setup actions
+
+2023-04-06  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll micro version
+
+	* src/Makevars: No longer set a C++ standard
+
 2022-12-18  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.1.7
