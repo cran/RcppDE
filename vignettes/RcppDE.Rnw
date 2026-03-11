@@ -5,7 +5,7 @@
 %\usepackage{flafter}
 \usepackage{booktabs}
 
-\author{Dirk Eddelbuettel\\Debian Project} % \And Second Author\\Plus Affiliation}
+\author{Dirk Eddelbuettel}%\\Debian Project} % \And Second Author\\Plus Affiliation}
 \title{From \pkg{DEoptim} to \pkg{RcppDE}: \\
   A case study in porting from \proglang{C} to \proglang{C++} \\
   using \pkg{Rcpp} and \pkg{RcppArmadillo}}
@@ -54,12 +54,12 @@
 
 \Address{
   Dirk Eddelbuettel \\
-  Debian Project \\
-  River Forest, IL, USA\\
+  %% Debian Project \\
+  %% River Forest, IL, USA\\
   %% Telephone: +43/1/31336-5053
   %% Fax: +43/1/31336-734
   E-mail: \email{edd@debian.org}\\
-  URL: \url{http://dirk.eddelbuettel.com}
+  URL: \url{https://dirk.eddelbuettel.com}
 }
 
 %% need no \usepackage{Sweave.sty}
@@ -1220,7 +1220,7 @@ RcppExport SEXP DEoptim(SEXP lowerS, SEXP upperS, SEXP fnS, SEXP controlS, SEXP 
     } catch( std::exception& ex) {
 	forward_exception_to_r(ex);
     } catch(...) {
-	::Rf_error( "c++ exception (unknown reason)");
+	(Rf_error)("c++ exception (unknown reason)");
     }
     return R_NilValue;
 }
@@ -2249,7 +2249,7 @@ namespace Rcpp {
 		SEXP sexp_fvec = ::Rf_eval(fn, env);	// but is still a lot slower right now
 		double f_result = REAL(sexp_fvec)[0];
 		if (ISNAN(f_result))
-		    ::Rf_error("NaN value of objective function! \nPerhaps adjust the bounds.");
+		    Rcpp::stop("NaN value of objective function! \nPerhaps adjust the bounds.");
 		return(f_result);
 	    }
 	};

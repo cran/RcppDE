@@ -1,6 +1,6 @@
 Package: RcppDE
-Version: 0.1.8
-Date: 2025-02-18
+Version: 0.1.9
+Date: 2026-03-10
 Title: Global Optimization by Differential Evolution in C++
 Authors@R: c(person("Dirk", "Eddelbuettel", role = c("aut", "cre"), email = "edd@debian.org",
                     comment = c(ORCID = "0000-0001-6419-907X")),
@@ -26,8 +26,9 @@ URL: https://github.com/eddelbuettel/rcppde,
         https://dirk.eddelbuettel.com/code/rcpp.de.html
 BugReports: https://github.com/eddelbuettel/rcppde/issues
 NeedsCompilation: yes
-Packaged: 2025-02-18 18:48:50 UTC; edd
-Author: Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>),
+Packaged: 2026-03-10 17:53:18 UTC; edd
+Author: Dirk Eddelbuettel [aut, cre] (ORCID:
+    <https://orcid.org/0000-0001-6419-907X>),
   David Ardia [aut] (Author of DEoptim),
   Katharine Mullen [aut] (Author of DEoptim),
   Brian Peterson [aut] (Author of DEoptim),
@@ -36,4 +37,4 @@ Author: Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>),
   Rainer Storn [aut] (Principal author of DE-Engine)
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Repository: CRAN
-Date/Publication: 2025-02-19 00:10:01 UTC
+Date/Publication: 2026-03-11 06:30:32 UTC
